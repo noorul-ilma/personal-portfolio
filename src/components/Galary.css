@@ -1,0 +1,118 @@
+/* Gallery Section Container */
+.gallery-section-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #042533;
+  }
+  
+
+  /* Filter Buttons */
+  .gallery-section-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 4%;
+    gap: 10px;
+  }
+  
+  .gallery-section-filter-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .gallery-section-filter-btn.active,
+  .gallery-section-filter-btn:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Grid */
+  .gallery-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Gallery Item */
+  .gallery-section-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .gallery-section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-section-item:hover .gallery-section-image {
+    transform: scale(1.05);
+  }
+  
+  /* Overlay on Hover */
+  .gallery-section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-section-item:hover .gallery-section-overlay {
+    opacity: 1;
+  }
+  
+  .gallery-section-overlay-title {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  /* Lightbox */
+  .gallery-section-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .gallery-section-lightbox-img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .gallery-section-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  

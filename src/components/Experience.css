@@ -1,0 +1,271 @@
+.experience-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #042533;
+    color: #d8ecec;
+    width: 100%;
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  margin: 4rem 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: 50%;
+  justify-content: flex-end;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: 50%;
+  justify-content: flex-start;
+}
+
+/* Timeline Marker */
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.marker-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--marker-color);
+  position: relative;
+  z-index: 2;
+}
+
+.marker-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: var(--marker-color);
+  opacity: 0.2;
+  animation: pulse12 2s infinite;
+}
+
+/* Timeline Content */
+.timeline-content {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.role-header h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.company-name, .period {
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.role-details {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.expanded .role-details {
+  height: auto;
+  opacity: 1;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  color: #e0e0e0;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.responsibilities li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--marker-color);
+}
+
+/* Hover Effects */
+.timeline-marker:hover {
+  transform: translateX(-50%) scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Animations */
+@keyframes pulse12 {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes floatIcon12 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Connecting Lines */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  width: 100px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: 50%;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .timeline-line {
+    left: 30px;
+  }
+
+  .timeline-item {
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .timeline-marker {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+
+  .timeline-content {
+    width: calc(100% - 60px);
+  }
+
+  .timeline-item::before {
+    left: 30px !important;
+    width: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .role-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .company-info {
+    font-size: 0.9rem;
+  }
+}
+
+/* Additional Animations */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp12 0.5s ease forwards;
+}
+
+@keyframes fadeInUp12 {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

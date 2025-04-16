@@ -1,0 +1,151 @@
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #042533; /* Dark background for the navbar */
+  color: #d8ecec;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  align-items: center;
+  padding: 20px 30px; /* Increased padding for a better look */
+  box-shadow: 0 8px 16px #10526e33; /* Subtle shadow for a floating effect */
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 28px; /* Larger font size */
+  font-weight: bold;
+  color: #d8ecec;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Nav Links Container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+/* Styled Nav Links */
+.nav-links a {
+  color: #bec4c4;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  padding: 8px 15px; /* Padding for clickable area */
+  border-radius: 5px; /* Round corners for links */
+}
+
+/* Hover effect with underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: #445455; /* Neon cyan effect */
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+/* Active Link Styling */
+.nav-links a.active {
+  background-color: hsl(180, 34%, 89%, 80%); /* Soft blue background for active links */
+  padding: 12px 18px; /* Increased padding for active link */
+  border-radius: 5px;
+  color: #162a2b;
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  color: #445455; /* Neon cyan color on hover */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Expand the underline to full width */
+}
+
+/* Add padding to the body to prevent content from hiding under the navbar */
+body {
+  padding-top: 70px; /* Adjust this value based on the navbar height */
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #d8ecec;
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+/* Mobile Menu Icon on hover */
+.mobile-menu-icon:hover {
+  color: #445455; /* Change icon color on hover */
+}
+
+/* Mobile-specific navbar */
+@media (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #162a2b;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow to create floating effect */
+    transition: transform 0.3s ease-out;
+  }
+
+  .nav-links.mobile-nav {
+    display: flex;
+    transform: translateY(0); /* Slide down effect */
+  }
+
+  .nav-links li {
+    padding: 15px 0; /* Increased padding for touch areas */
+  }
+
+  /* Close Menu Effect */
+  .nav-links.mobile-nav.hide {
+    transform: translateY(-100%); /* Slide up to hide the menu */
+  }
+
+  /* Background overlay when the menu is open */
+  .navbar.open .overlay {
+    display: block;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark background behind the menu */
+    display: none;
+    z-index: 999;
+  }
+}

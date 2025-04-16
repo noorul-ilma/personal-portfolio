@@ -1,0 +1,79 @@
+/* Title Container */
+.title-container {
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    
+  }
+  
+  /* Title */
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bolder;
+    color: #d8ecec; /* Base color for text */
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #d8ecec, #13678b); /* Gradient color for title */
+    -webkit-background-clip: text; /* Ensures the gradient is applied to the text */
+    color: transparent; /* Makes text color transparent to show the gradient */
+  }
+  
+  
+  .icon-wrapper {
+    margin-right: 2%;
+    display: inline-flex;  /* Ensures the icon stays centered */
+    justify-content: center;
+    align-items: center;
+    width: 50px;  /* Adjust size */
+    height: 50px;
+    border-radius: 50%;  /* Makes it a circle */
+    background: linear-gradient(to right, #13678b, #06364b); /* Gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    animation: iconBounce 2s infinite;
+  }
+  
+  .title-icon {
+    font-size: 2rem;
+    color: #d8ecec;
+  }
+  
+  
+  
+  /* Bounce Animation for Icon */
+  @keyframes iconBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Underline */
+  .underline {
+    width: 25%;
+    height: 5px;
+    border-radius: 10px;
+    background: linear-gradient(to right,#13678b, #d8ecec, #13678b); /* Gradient for the underline */
+    margin: 0 auto;
+    animation: underlineAnimation 3s ease-in-out infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Underline Animation */
+  @keyframes underlineAnimation {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 25%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  

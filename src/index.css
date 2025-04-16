@@ -1,0 +1,40 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure full background color applies */
+html, body, #root {
+  background-color: #042533 !important; /* Force green background */
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Additional adjustments to ensure no space */
+body, .about-section {
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure no padding/margin on container */
+.about-section .container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.about-section .row {
+  margin: 0 !important; /* Ensure no margin on rows */
+}
+
+.about-section .col-md-6 {
+  padding: 0 !important; /* Remove any padding from columns */
+}
+
+/* Add custom padding/margin if required */
+.about-content {
+  padding: 20px; /* Add your custom padding to the content */
+}
+
