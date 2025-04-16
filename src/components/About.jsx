@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaLinkedin, FaFacebook, FaTwitter, FaDownload,FaEnvelope  } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaDownload,FaEnvelope,FaInstagram  } from "react-icons/fa";
 import "./About.css"; 
 import SectionDivider from './SectionDivider'; 
 import resume from '/public/resume.pdf';
@@ -40,10 +40,10 @@ function About() {
 
           {/* Social Media Icons */}
           <div className="social-icons">
-            <a href="https://www.linkedin.com/in/yalini-thevarajan-ba737233b/" target="_blank" rel="noopener noreferrer" className="socialmedia-icon"><FaLinkedin /></a>
-            <a href="https://www.facebook.com/yaly.yaly.16718?mibextid=wwXIfr&rdid=HRmwGJfpF4FTr7FY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16Ng18X5fR%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" className="socialmedia-icon"><FaFacebook /></a>
-            <a href="#"  target="_blank" rel="noopener noreferrer" className="socialmedia-icon"><FaTwitter /></a>
-            <a href="mailto:yalinithevarajan@gmail.com" className="socialmedia-icon">
+            <a href="https://www.linkedin.com/in/noorul-ilma-1a2939314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="socialmedia-icon"><FaLinkedin /></a>
+            <a href="https://www.facebook.com/share/15BoJqFxVZ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="socialmedia-icon"><FaFacebook /></a>
+            <a href="https://www.instagram.com/ilma.noorul?igsh=NG5pY2MzY28xbWFq&utm_source=qr"  target="_blank" rel="noopener noreferrer" className="socialmedia-icon"><FaInstagram /></a>
+            <a href="ilmanoorul@gmail.com" className="socialmedia-icon">
     <FaEnvelope />
   </a>
           </div>

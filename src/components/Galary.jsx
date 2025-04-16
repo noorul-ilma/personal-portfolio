@@ -3,11 +3,11 @@ import './Galary.css'; // Assuming you already have this CSS file
 import { FaBriefcase  } from "react-icons/fa";
 
 const projectData = [
-  { id: 1, title: 'React Project', image: 'sample.jpeg', category: 'React' },
-  { id: 2, title: 'WordPress Site', image: 'sample.jpeg', category: 'WordPress' },
-  { id: 3, title: 'AI Platform', image: 'sample.jpeg', category: 'AI' },
-  { id: 4, title: 'Portfolio Website', image: 'sample.jpeg', category: 'React' },
-  { id: 5, title: 'eCommerce Site', image: 'sample.jpeg', category: 'WordPress' },
+  { id: 1, title: 'Awareness session about diabetic day in Anuradhapura hospital', image: 'diabetic.jpeg', category: 'diabetic-day' },
+  { id: 2, title: 'Improve health of community', image: 'charity.jpeg', category: 'Charity-shop ' },
+  { id: 3, title: 'Improve social and mental wellbeing', image: 'under.jpeg', category: 'Under-the-moon' },
+  { id: 4, title: 'Awareness session about diabetic day in Anuradhapura hospital', image: 'diabetic2.jpeg', category: 'diabetic-day' },
+  { id: 5, title: 'Improve social and mental wellbeing', image: 'under2.jpeg', category: 'Under-the-moon' },
 ];
 
 const Gallery = () => {

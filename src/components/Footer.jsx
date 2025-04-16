@@ -27,13 +27,13 @@ function Footer() {
     {
       id: 1,
       icon: <FaLinkedin />,
-      url: 'https://linkedin.com/in/your-profile', // Replace with your actual profile
+      url: 'https://www.linkedin.com/in/noorul-ilma-1a2939314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', // Replace with your actual profile
       label: 'LinkedIn'
     },
     {
       id: 2,
       icon: <FaFacebook />,
-      url: 'https://facebook.com/your-profile', // Replace with your actual profile
+      url: 'https://www.facebook.com/share/15BoJqFxVZ/?mibextid=wwXIfr', // Replace with your actual profile
       label: 'Facebook'
     },
     {

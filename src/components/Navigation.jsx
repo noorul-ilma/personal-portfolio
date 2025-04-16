@@ -18,7 +18,7 @@ function Navigation() {
   // Function to detect the active section while scrolling
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "education", "experience", "volunteer", "skills"];
+      const sections = ["about", "education", "experience", "galary", "skills"];
       let currentSection = "";
 
       for (let id of sections) {
@@ -55,7 +55,7 @@ function Navigation() {
         <li><a href="#about" className={activeSection === "about" ? "active" : ""} onClick={() => scrollToSection("about")}>About</a></li>
         <li><a href="#education" className={activeSection === "education" ? "active" : ""} onClick={() => scrollToSection("education")}>Education</a></li>
         <li><a href="#experience" className={activeSection === "experience" ? "active" : ""} onClick={() => scrollToSection("experience")}>Experience</a></li>
-        <li><a href="#galary" className={activeSection === "galary" ? "active" : ""} onClick={() => scrollToSection("galary")}>Galary</a></li>
+        <li><a href="#galary" className={activeSection === "galary" ? "active" : ""} onClick={() => scrollToSection("galary")}>Gallery</a></li>
         <li><a href="#skills" className={activeSection === "skills" ? "active" : ""} onClick={() => scrollToSection("skills")}>Skills</a></li>
       </ul>
     </nav>

@@ -34,6 +34,20 @@ const educationData = [
     description: "Participated in a specialized program organized by the U.S. Embassy focusing on professional development and cultural exchange."
   },
   {
+    year: "2024 - 2025",
+    title: "Diploma in Human Resource Management",
+    institution: "Casted Institute",
+    icon: <FaGraduationCap />,
+    description: "Developed key competencies in HR functions such as recruitment, training and development, performance management, and organizational behavior."
+  },
+  {
+    year: "2024 - 2025",
+    title: "Diploma in Psychology",
+    institution: "Casted Institute",
+    icon: <FaGraduationCap />,
+    description: "Explored fundamental concepts in psychology including cognitive behavior, mental health, and human development."
+  },
+  {
     year: "GCE - Advanced Level",
     title: "Sri Lanka",
     institution: "",
